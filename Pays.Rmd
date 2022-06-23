@@ -1,7 +1,7 @@
 # Analyse des données par pays
 
 
-```{r fig.height=5, fig.width=5}
+```{r out.height=5, out.width=5}
 knitr::include_app("https://thylanor.shinyapps.io/Graphiques_pays/")
 
 ```

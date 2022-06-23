@@ -3,7 +3,7 @@ language:
   ui:
     chapter_name: "Partie "
 rmd_files: [
-  "Intro.Rmd",
+  "index.Rmd",
   "Monde.Rmd",
   "Continent.Rmd",
   "Pays.Rmd",

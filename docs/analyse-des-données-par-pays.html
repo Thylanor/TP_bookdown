@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Partie 4 Analyse des données par pays | Bookdown TP Cours R</title>
+  <meta name="description" content="Partie 4 Analyse des données par pays | Bookdown TP Cours R" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Partie 4 Analyse des données par pays | Bookdown TP Cours R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="openscapes/series" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Partie 4 Analyse des données par pays | Bookdown TP Cours R" />
+  
+  
+  
+
+<meta name="author" content="Svetlana et Simon L" />
+
+
+<meta name="date" content="2022-06-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="analyse-par-continent.html"/>
+<link rel="next" href="cartes-choroplèthe-année-2019.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="lib/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="lib/css/style.css" type="text/css" />
+<link rel="stylesheet" href="lib/css/lesson.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Mini Bookdown Tutorial</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#objectifs-de-la-démarche"><i class="fa fa-check"></i><b>1.1</b> Objectifs de la démarche</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#présentation-des-données"><i class="fa fa-check"></i><b>1.2</b> Présentation des données</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="analyse-mondiale.html"><a href="analyse-mondiale.html"><i class="fa fa-check"></i><b>2</b> Analyse mondiale</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="analyse-mondiale.html"><a href="analyse-mondiale.html#consommation-dénergie-annuelle-mondiale-par-type-dénergie"><i class="fa fa-check"></i><b>2.1</b> Consommation d’énergie annuelle mondiale par type d’énergie</a></li>
+<li class="chapter" data-level="2.2" data-path="analyse-mondiale.html"><a href="analyse-mondiale.html#consommation-dénergie-annuelle-mondiale-par-source-dénergie"><i class="fa fa-check"></i><b>2.2</b> Consommation d’énergie annuelle mondiale par source d’énergie</a></li>
+<li class="chapter" data-level="2.3" data-path="analyse-mondiale.html"><a href="analyse-mondiale.html#production-annuelle-mondiale-de-nourriture"><i class="fa fa-check"></i><b>2.3</b> Production annuelle mondiale de nourriture</a></li>
+<li class="chapter" data-level="2.4" data-path="analyse-mondiale.html"><a href="analyse-mondiale.html#evolution-de-la-population-mondiale-annuelle"><i class="fa fa-check"></i><b>2.4</b> Evolution de la population mondiale annuelle</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="analyse-par-continent.html"><a href="analyse-par-continent.html"><i class="fa fa-check"></i><b>3</b> Analyse par continent</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="analyse-par-continent.html"><a href="analyse-par-continent.html#consommation-dénergie-annuelle-par-continent-et-type-dénergie"><i class="fa fa-check"></i><b>3.1</b> Consommation d’énergie annuelle par continent et type d’énergie</a></li>
+<li class="chapter" data-level="3.2" data-path="analyse-par-continent.html"><a href="analyse-par-continent.html#consommation-dénergie-annuelle-par-continent-et-source-dénergie-énergie-fossile"><i class="fa fa-check"></i><b>3.2</b> Consommation d’énergie annuelle par continent et source d’énergie (énergie fossile)</a></li>
+<li class="chapter" data-level="3.3" data-path="analyse-par-continent.html"><a href="analyse-par-continent.html#consommation-dénergie-annuelle-par-continent-et-source-dénergie-énergie-à-faible-émission-de-co2"><i class="fa fa-check"></i><b>3.3</b> Consommation d’énergie annuelle par continent et source d’énergie (énergie à faible émission de CO2)</a></li>
+<li class="chapter" data-level="3.4" data-path="analyse-par-continent.html"><a href="analyse-par-continent.html#production-annuelle-de-nourriture-par-continent"><i class="fa fa-check"></i><b>3.4</b> Production annuelle de nourriture par continent</a></li>
+<li class="chapter" data-level="3.5" data-path="analyse-par-continent.html"><a href="analyse-par-continent.html#evolution-de-la-population-annuelle-par-continent"><i class="fa fa-check"></i><b>3.5</b> Evolution de la population annuelle par continent</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="analyse-des-données-par-pays.html"><a href="analyse-des-données-par-pays.html"><i class="fa fa-check"></i><b>4</b> Analyse des données par pays</a></li>
+<li class="chapter" data-level="5" data-path="cartes-choroplèthe-année-2019.html"><a href="cartes-choroplèthe-année-2019.html"><i class="fa fa-check"></i><b>5</b> Cartes Choroplèthe année 2019</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cartes-choroplèthe-année-2019.html"><a href="cartes-choroplèthe-année-2019.html#carte-mondiale-de-la-consommation-dénergie"><i class="fa fa-check"></i><b>5.1</b> Carte mondiale de la consommation d’énergie</a></li>
+<li class="chapter" data-level="5.2" data-path="cartes-choroplèthe-année-2019.html"><a href="cartes-choroplèthe-année-2019.html#carte-mondiale-de-la-production-de-nourriture"><i class="fa fa-check"></i><b>5.2</b> Carte mondiale de la production de nourriture</a></li>
+<li class="chapter" data-level="5.3" data-path="cartes-choroplèthe-année-2019.html"><a href="cartes-choroplèthe-année-2019.html#carte-mondiale-de-la-population"><i class="fa fa-check"></i><b>5.3</b> Carte mondiale de la population</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="carte-de-visualisation-annuelle.html"><a href="carte-de-visualisation-annuelle.html"><i class="fa fa-check"></i><b>6</b> Carte de visualisation annuelle</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bookdown TP Cours R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="analyse-des-données-par-pays" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Partie 4</span> Analyse des données par pays<a href="analyse-des-données-par-pays.html#analyse-des-données-par-pays" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<iframe src="https://thylanor.shinyapps.io/Graphiques_pays/?showcase=0" width="672" height="400px" data-external="1">
+</iframe>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="analyse-par-continent.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cartes-choroplèthe-année-2019.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/jules32/bookdown-tutorial/edit/master/Pays.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["series.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

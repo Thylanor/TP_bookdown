@@ -7,9 +7,10 @@ Cette page présente l'analyse à l'échelle mondiale au fur et à mesure des an
 knitr::opts_chunk$set(
 	echo = FALSE,
 	fig.path = "Figures/",
-	fig.retina = 3
+	fig.retina = 3,
+	message = FALSE,
+	warning = FALSE
 )
-
 library(flexdashboard)
 library(tidyverse)
 library(lubridate)

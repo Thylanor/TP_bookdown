@@ -2,6 +2,6 @@
 
 
 ```{r}
-knitr::include_app("https://thylanor.shinyapps.io/Graphiques_pays/")
+knitr::include_app("https://thylanor.shinyapps.io/Graphiques_pays/",height = "1000px")
 
 ```

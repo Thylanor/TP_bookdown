@@ -4,10 +4,9 @@
 
 ```{r}
 
-world_map_data <-read_delim("world_map_data.csv",delim=";") |> 
-  filter(year==2019)
+world_map_data_2019 <-read_delim("world_map_data_2019.csv",delim=";")
 
-ggplot(world_map_data)+
+ggplot(world_map_data_2019)+
   aes(long,lat,group=group)+
   geom_polygon(aes(fill=energy_value),colour="black")+
   labs(title="Carte de consommation énergétique en 2019")+
@@ -20,7 +19,7 @@ ggplot(world_map_data)+
 ## Carte mondiale de la production de nourriture
 
 ```{r}
-ggplot(world_map_data)+
+ggplot(world_map_data_2019)+
   aes(long,lat,group=group)+
   geom_polygon(aes(fill=food_value),colour="black")+
   labs(title="Carte de production de nourriture en 2019")+
@@ -33,7 +32,7 @@ ggplot(world_map_data)+
 ## Carte mondiale de la population
 
 ```{r}
-ggplot(world_map_data)+
+ggplot(world_map_data_2019)+
   aes(long,lat,group=group)+
   geom_polygon(aes(fill=population),colour="black")+
   labs(title="Carte de population en 2019")+

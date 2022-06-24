@@ -21,7 +21,7 @@ Nous verrons dans un premier temps les données à l'échelle mondiale afin de v
 
 Ensuite, nous entrerons dans le détail en ayant une vue continent par continent sur les mêmes éléments selon les années.
 
-L'application shiny qui suit présentera le détail, pays par pays.
+L'application shiny qui suit présentera le détail, selon le pays sélectionné par l'utilisateur.
 
 Nous visualiserons ensuite une vue cartographiée de l'année 2019 des totaux de consommation d'énergie, de production de nourriture ainsi que la population.
 

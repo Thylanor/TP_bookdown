@@ -2,7 +2,7 @@
 
 
 ```{r}
-knitr::include_app("https://thylanor.shinyapps.io/Cartes_choroplethes/")
+knitr::include_app("https://svet-arn.shinyapps.io/app_cartes/")
 ```
 
 

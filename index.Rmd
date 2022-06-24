@@ -3,7 +3,7 @@ title: "Bookdown TP Cours R"
 author: "Svetlana et Simon L"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-# output: bookdown::gitbook
+ output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
